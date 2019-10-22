@@ -348,8 +348,10 @@ avg_first_SW_revenue = first_monthly_HM_SW.reduce((a, b) => a + b, 0) + first_mo
 avg_first_C_revenue = first_monthly_HM_C.reduce((a, b) => a + b, 0) + first_monthly_CF_C.reduce((a, b) => a + b, 0) + first_monthly_FF_C.reduce((a, b) => a + b, 0) / first_monthly_HM_C.length;
 
 /* GeoJSON HighCharts BEFORE WHOPPER */
+var geojson = {"type":"FeatureCollection","features":[{"type":"Feature","properties":{"loc_code":"NE","postal":"NE"},"geometry":{"type":"Polygon","coordinates":[[[-117.22755432128906,32.86805334178712],[-117.20146179199217,32.86805334178712],[-117.20146179199217,32.88448859695396],[-117.22755432128906,32.88448859695396],[-117.22755432128906,32.86805334178712]]]}},{"type":"Feature","properties":{"loc_code":"C","postal":"C"},"geometry":{"type":"Polygon","coordinates":[[[-117.24472045898436,32.85695061212176],[-117.22755432128906,32.85695061212176],[-117.22755432128906,32.868341705856324],[-117.24472045898436,32.868341705856324],[-117.24472045898436,32.85695061212176]]]}},{"type":"Feature","properties":{"loc_code":"SE","postal":"SE"},"geometry":{"type":"Polygon","coordinates":[[[-117.22738265991211,32.842817855358895],[-117.19837188720703,32.842817855358895],[-117.19837188720703,32.85680641168541],[-117.22738265991211,32.85680641168541],[-117.22738265991211,32.842817855358895]]]}},{"type":"Feature","properties":{"loc_code":"SW","postal":"SW"},"geometry":{"type":"Polygon","coordinates":[[[-117.25879669189455,32.84671179869895],[-117.24489212036131,32.84671179869895],[-117.24489212036131,32.857094812323695],[-117.25879669189455,32.857094812323695],[-117.25879669189455,32.84671179869895]]]}},{"type":"Feature","properties":{"loc_code":"NW","postal":"NW"},"geometry":{"type":"Polygon","coordinates":[[[-117.25914001464844,32.868630068987805],[-117.24472045898436,32.868630068987805],[-117.24472045898436,32.88189375925038],[-117.25914001464844,32.88189375925038],[-117.25914001464844,32.868630068987805]]]}}]};
 
-$.getJSON('map.geojson', function (geojson) {
+
+
     // Initiate the chart
     Highcharts.mapChart('mapsChartBeforeWhopper', {
         chart: {
@@ -392,7 +394,6 @@ $.getJSON('map.geojson', function (geojson) {
                 format: '{point.properties.postal}'
             }
         }]
-    })
 });
 
 var last_monthly_HM_NE = [];
@@ -447,7 +448,6 @@ avg_last_C_revenue = last_monthly_HM_C.reduce((a, b) => a + b, 0) + last_monthly
 
 /* GeoJSON Chart AFTER WHOPPER */
 
-$.getJSON('map.geojson', function (geojson) {
     // Initiate the chart
     Highcharts.mapChart('mapsChartAfterWhopper', {
         chart: {
@@ -490,5 +490,4 @@ $.getJSON('map.geojson', function (geojson) {
                 format: '{point.properties.postal}'
             }
         }]
-    })
 });
