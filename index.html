@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>McDonalds!</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <img src="Mcdonalds-Logo-PNG-File.png", style="height:10%">
+        <h1 align='center'>Dear Almighty CEO! We Will Prevail Against The Kingdom of Burger</h1>
+
+        <strong>Click the download icon to get the offline version</strong>
+        <a href="DSC106HW2CEOPDF.pdf" download><img src="download_button.png" alt="download" width="50" height="50"></a>
+        <p>Included on this page are interactive charts that detail the past months/years of Hamburger(HM), Chicken Fillet(CF), and Fish Fillet(FF) sales in stores of the five districts</p>
+        <ul>
+            <li>Northwest (NW)</li>
+            <li>Northeast (NE)</li>
+            <li>Southeast (SE)</li>
+            <li>Southwest (SW)</li>
+            <li>Central (C)</li>
+
+        </ul>
+                
+        <p>This chart details the extent of impact on sales which is seen after the "Impossible Whopper" release</p>
+        <div id="WhopperChartPlaceHolder"></div>
+
+        <p>Surely and understandably, our hamburgers are our top selling product and we are consistent with sales, maybe our own hamburger innovation can increase sales</p>
+        <div id="burgersChartPlaceHolder"></div>
+
+        <p>These two pie charts show that the performance of the hamburger really did stay consistent in our sales, people really prefer our burgers.</p>
+   
+
+        <div style="width: 100%; display: table;">
+                <div style="display: table-row">
+                    <div id="pieBeforeWhopperChartPlaceHolder", style="width: 600px; display: table-cell;"> Left </div>
+                    <div id="pieAfterWhopperChartPlaceHolder", style="display: table-cell;"> Right </div>
+                </div>
+            </div>
+        
+        <p>Looking at this geographical representation of district sales, it is clear that Northeast performs the best while the others need to step their game up.</p>
+
+        <!-- HighCharts Chloropleth-->
+        <div class='mapChartContainer'>
+            <div id='mapsChartBeforeWhopper', style="height:500px;width:45%;float:left"></div>
+            <div id='mapsChartAfterWhopper', style="height:500px;width:45%"></div>
+        </div>
+
+        <p> Oh grand CEO, now that you've look at this data, I know you will make the best decisions regarding our company and further the prominiance of McDonalds in the hamburger sandwich industry.</p>
+
+        
+        <!--External imports begin --> 
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+        <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        
+        <!-- External imports end-->
+
+        <!-- Internal imports begin -->
+        <script src="mcdonalds_highcharts.js"></script>
+
+    </body>
+</html>
